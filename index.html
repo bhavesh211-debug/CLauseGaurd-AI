@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Terms & Conditions Summarizer</title>
+    <!-- Link to your separate CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="header">
+            <h1>T&C AI Summarizer</h1>
+            <p>Paste website legal terms to extract red flags & key points instantly.</p>
+        </div>
+
+        <!-- Replace your old textarea with this URL input field -->
+<div class="input-group">
+    <input type="url" id="tc-input" placeholder="Enter website T&C link (e.g., https://example.com/terms)" />
+</div>
+<div id="error-msg" class="error-message">Please enter a valid website URL!</div>
+        <div id="error-msg" class="error-message">Please paste some text before analyzing!</div>
+
+        <button id="analyze-btn" class="btn-analyze">
+            <span id="btn-text">Analyze Terms</span>
+            <div id="btn-spinner" class="spinner"></div>
+        </button>
+
+        <!-- Results Container -->
+        <div id="results-container" class="results-container">
+            
+            <!-- Red Flags Section -->
+            <div class="section-card red-flags">
+                <div class="section-title">⚠️ Red Flags & Risk Warnings</div>
+                <ul id="red-flags-list"></ul>
+            </div>
+
+            <!-- Key Points Section -->
+            <div class="section-card key-points">
+                <div class="section-title">✅ Key Terms & Rights</div>
+                <ul id="key-points-list"></ul>
+            </div>
+
+            <!-- Keywords Section -->
+            <div>
+                <div style="font-size: 0.9rem; color: #94a3b8; font-weight: 600;">Keywords Identified:</div>
+                <div id="keywords-list" class="keywords-container"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Link to your separate JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
